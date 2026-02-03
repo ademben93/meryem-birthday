@@ -2,50 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Meryem 🎉</title>
 <style>
-body {
-  background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  max-width: 320px;
-}
-h1 { color: #e91e63; }
-p { font-size: 18px; }
-img {
-  width: 100%;
-  border-radius: 15px;
-  margin: 15px 0;
-}
-.hearts {
-  font-size: 24px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    color: #e91e63;
+    font-size: 2.5em;
+    margin: 10px 0;
+  }
+
+  h2 {
+    color: #ff4081;
+    margin: 5px 0 15px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.4;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .hearts {
+    font-size: 24px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+
+  .home-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4081;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .home-btn:hover {
+    background: #e91e63;
+    transform: scale(1.1);
+  }
+
+  /* Floating heart animation */
+  .floating-heart {
+    position: absolute;
+    font-size: 24px;
+    animation: floatHearts 5s linear infinite;
+  }
+
+  @keyframes floatHearts {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+  }
 </style>
 </head>
 <body>
 
-<div class="card">
-  <h1>Happy Birthday 🎂</h1>
+<div class="container">
+  <h1>Happy Birthday 🎉</h1>
   <h2>Meryem 💖</h2>
 
-  <img src="IMG_20260203_131757.jpg" alt="Meryem">
+  <img src="photo.jpg" alt="Meryem">
 
-  <p>Congratulations on your birthday 🎉<br>
-  May your life be full of joy, love and smiles ✨</p>
+  <p>Congratulations on your special day! 🎂  
+  May your year be full of love, joy, and endless smiles ✨</p>
 
   <div class="hearts">💖 💕 💗 💓 💞</div>
+
+  <a href="#" class="home-btn">🏠 Home</a>
 </div>
+
+<!-- Floating hearts -->
+<div class="floating-heart" style="left:10%;">💖</div>
+<div class="floating-heart" style="left:30%;">💗</div>
+<div class="floating-heart" style="left:50%;">💞</div>
+<div class="floating-heart" style="left:70%;">💕</div>
+<div class="floating-heart" style="left:90%;">💓</div>
 
 </body>
 </html>
